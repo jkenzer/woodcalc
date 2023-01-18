@@ -1,7 +1,7 @@
 function stylesheet(token, useActualHostSelector, useNativeDirPseudoclass) {
   var shadowSelector = token ? ("[" + token + "]") : "";
   var hostSelector = token ? ("[" + token + "-host]") : "";
-  return "main" + shadowSelector + " {margin: 30px;display: flex;flex-direction: column;align-items: center;}h1" + shadowSelector + " {color: #1798c1;}";
+  return "main" + shadowSelector + " {margin: 30px;display: flex;flex-direction: column;align-items: center;}h1" + shadowSelector + " {color: #1798c1;}.calculator" + shadowSelector + " {display: grid;grid-template-columns: repeat(2, 1fr);}.results-display" + shadowSelector + " {grid-column: 1 / 3;padding: 1rem 5rem;font-size: 2rem;background-color: lightblue;border: 2px black lightgray;text-align: right;margin-bottom: 2rem;}.whole-numbers" + shadowSelector + " {grid-row: 2 / 4;display: grid;grid-template-columns: repeat(2, 1fr);}.btn" + shadowSelector + " {font-size: 2rem;margin-bottom: 0.5rem;margin-right: 0.5rem;}.numerator" + shadowSelector + " {padding-bottom: 1rem;margin-bottom: 1rem;border-bottom: 2px solid black;display: grid;grid-template-columns: repeat(3, 1fr);}.denominator" + shadowSelector + " {display: grid;grid-template-columns: repeat(3, 1fr);}.operators" + shadowSelector + " {grid-column: 1 / 3;display: grid;grid-template-columns: repeat(5, 1fr);}";
   /*LWC compiler v2.17.0*/
 }
 export default [stylesheet];
