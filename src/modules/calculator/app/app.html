@@ -2,19 +2,19 @@
     <div class="calculator">
         <div class="results-display">{currentValue}</div>
         <div class="whole-numbers">
-            <button class="btn btn-primary">C</button>
-            <button class="btn btn-primary">+/-</button>
-            <button class="btn btn-primary">1</button>
-            <button class="btn btn-primary">2</button>
-            <button class="btn btn-primary">3</button>
-            <button class="btn btn-primary">4</button>
-            <button class="btn btn-primary">5</button>
-            <button class="btn btn-primary">6</button>
-            <button class="btn btn-primary">7</button>
-            <button class="btn btn-primary">8</button>
-            <button class="btn btn-primary">9</button>
-            <button class="btn btn-primary">0</button>
-            <button class="btn btn-primary">Delete</button>
+            <button class="btn btn-primary" onclick={clear}>C</button>
+            <button class="btn btn-primary" onclick={sign}>+/-</button>
+            <button class="btn btn-primary" onclick={integer} data-value="1">1</button>
+            <button class="btn btn-primary" onclick={integer} data-value="2">2</button>
+            <button class="btn btn-primary" onclick={integer} data-value="3">3</button>
+            <button class="btn btn-primary" onclick={integer} data-value="4">4</button>
+            <button class="btn btn-primary" onclick={integer} data-value="5">5</button>
+            <button class="btn btn-primary" onclick={integer} data-value="6">6</button>
+            <button class="btn btn-primary" onclick={integer} data-value="7">7</button>
+            <button class="btn btn-primary" onclick={integer} data-value="8">8</button>
+            <button class="btn btn-primary" onclick={integer} data-value="9">9</button>
+            <button class="btn btn-primary" onclick={integer} data-value="0">0</button>
+            <button class="btn btn-primary" onclick={deleteLastValue}>Delete</button>
         </div>
         <div class="fractions">
             <button class="btn btn-primary">
