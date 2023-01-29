@@ -22,7 +22,32 @@ export default class WoodCalc extends LightningElement {
 
   integer(event) {
     let value = event.currentTarget.dataset.value;
-    this.currentOperations.push(value);
-    this.currentResult = value;
+    if (this.currentResult === 0) {
+      this.currentResult = value;
+    } else {
+      if (/\//g.test(this.currentResult)) {
+        // grab the integer part of the fraction
+        let [string, integer, fraction] =
+          this.currentResult.match(/(\d+) (.*)/);
+        this.currentResult = `${integer}${value} ${fraction}`;
+      } else {
+        this.currentResult += `${value}`;
+      }
+    }
+  }
+
+  fraction(event) {
+    let value = event.currentTarget.dataset.value;
+    if (this.currentResult === 0) {
+      this.currentResult = value;
+    } else {
+      if (/\//g.test(this.currentResult)) {
+        let [string, integer, fraction] =
+          this.currentResult.match(/(\d+) (.*)/);
+        this.currentResult = `${integer} ${value}`;
+      } else {
+        this.currentResult += ` ${value}`;
+      }
+    }
   }
 }
